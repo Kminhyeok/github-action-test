@@ -10,7 +10,7 @@ output:
   num_squared:
   description: 'Square of the input'
   # need to spectify the extra 'value' field for 'composite' actions
-  value: ${{ steps.get-square.outputs.num.squared }}
+  value: ${{ runs.get-square.outputs.num.squared }}
 runs:
   using: 'composite'
   steps:
